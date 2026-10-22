@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:3000/api/books/{{bookId}}
+method: PUT
+body:
+  type: json
+  content: |-
+    {
+        "title": "Dracula",
+        "author": "Bram Stoker",
+        "publisher": "Fingerprint!",
+        "price": 30
+    }
+order: 4000

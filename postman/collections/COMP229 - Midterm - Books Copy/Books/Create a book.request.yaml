@@ -1,0 +1,22 @@
+$kind: http-request
+url: http://localhost:3000/api/books/
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "title": "The Secret of Secrets: A Novel",
+        "author": "Dan Brown",
+        "publisher": "Doubleday",
+        "price": 34.76,
+        "ISBN": "q1w2e3r4",
+        "publicationYear": 2025,
+        "genre": "drama"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      let jsonData = pm.response.json();
+      pm.environment.set("bookId", jsonData.data.id);
+    language: text/javascript
+order: 1000

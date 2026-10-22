@@ -1,11 +1,12 @@
 require('dotenv').config()
 const mongoose = require('mongoose');
 
-let username = process.env.DB_USERNAME || 'robertblick_db_user';
-let password = process.env.DB_PASSWORD || 'u2hJqrUH0e9nuEbe';
-let cluster = process.env.DB_CLUSTER || 'Cluster0';
+let username = process.env.DB_USERNAME || '';
+let password = process.env.DB_PASSWORD || '';
+let cluster = process.env.DB_CLUSTER || '';
 let dbname = 'midterm';
-let ConnectionString = `mongodb+srv://${robertblick_db_user}:${u2hJqrUH0e9nuEbe}@${Cluster0}/${midterm}?retryWrites=true&w=majority`
+//let ConnectionString = `mongodb+srv://${username}:${password}@${cluster}/${dbname}?retryWrites=true&w=majority`
+let ConnectionString = `mongodb+srv://${robertblick_db_user}:${u2hJqrUH0e9nuEbe}@${Cluster0}/${dbname}?retryWrites=true&w=majority`
 
 const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } };
 
