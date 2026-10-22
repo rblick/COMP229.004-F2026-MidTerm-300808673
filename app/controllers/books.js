@@ -98,7 +98,7 @@ module.exports.remove = async function (req, res, next) {
 
     // Handle the result and send a response
     if (result.deletedCount > 0) {
-      res.status(200);
+      
       res.json(
         {
           success: true,
