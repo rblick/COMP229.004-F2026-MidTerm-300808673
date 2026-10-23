@@ -1,4 +1,4 @@
 $kind: http-request
-url: http://localhost:3000/api/books/{{bookId}}
+url: http://localhost:3000/api/books/6adaa3706cf40456bee27169
 method: GET
 order: 3000
