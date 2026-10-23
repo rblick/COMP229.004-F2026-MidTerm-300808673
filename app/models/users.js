@@ -9,7 +9,7 @@ const UsersSchema = new Schema({
     unique: true,
     match: [/.+\@.+\..+/, "Please fill a valid e-mail address"]
   },
-  passowrd: String,
+  password: String,
   created: {
     type: Date,
     default: Date.now,

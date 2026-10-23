@@ -1,5 +1,25 @@
 let UsersModel = require('../models/users');
 
+module.exports.processAdd = async (req, res, next) => {
+    try {
+        let user = req.body;
+        let result = await UsersModel.processAdd(user);
+        console.log("Result: ", result);
+     
+        res.json(
+            {
+            success: true,
+            message: "User created successfully.",
+            data: result
+            }
+        );
+ 
+    } catch (error) {
+        console.log(error);
+        next(error);
+    }
+}
+
 module.exports.usersList = async function (req, res, next) {
 
     try {
@@ -32,17 +52,7 @@ module.exports.getByID = async function (req, res, next) {
     }
 }
 
-module.exports.processAdd = async (req, res, next) => {
-    try {
- 
-        // Builds a new user from the values of the body of the request.
-        // Add your code here to create a new user object using the UsersModel and the data from req.body
 
-    } catch (error) {
-        console.log(error);
-        next(error);
-    }
-}
 
 module.exports.processEdit = async (req, res, next) => {
     try {
