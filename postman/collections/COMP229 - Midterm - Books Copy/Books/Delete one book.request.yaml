@@ -1,4 +1,4 @@
 $kind: http-request
-url: http://localhost:3000/api/books/6adaa40a2017d08381149206
+url: http://localhost:3000/api/books/6adaa63956998f6879517660
 method: DELETE
 order: 5000

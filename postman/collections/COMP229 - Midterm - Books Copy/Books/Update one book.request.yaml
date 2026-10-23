@@ -1,5 +1,5 @@
 $kind: http-request
-url: http://localhost:3000/api/books/{{bookId}}
+url: http://localhost:3000/api/books/6adaa63956998f6879517660
 method: PUT
 body:
   type: json
